@@ -1,7 +1,7 @@
 <template>
   <div id="edit-settings">
     <h3>Edit Settings</h3>
-    <p style="color: red;">
+    <p style="color: red">
       NOTE:
       <span>If all fields are empty, reload the page to get data</span>
     </p>
@@ -209,28 +209,30 @@
           </div>
         </div>
       </div>
-      <router-link v-bind:to="{name: 'view-settings'}" class="btn">Cancel</router-link>
+      <router-link v-bind:to="{ name: 'view-settings' }" class="btn"
+        >Cancel</router-link
+      >
       <button
         type="submit"
         class="btn btn-success"
         :disabled="
           !title &&
-            !displayName &&
-            !logo &&
-            !working_hour.weekdays &&
-            !working_hour.weekend &&
-            !contact.name &&
-            !contact.phone &&
-            !contact.email &&
-            !contact.zalo &&
-            !contact.facebook &&
-            !contact.youtube &&
-            !contact.fanpage &&
-            !contact.tiki &&
-            !contact.shopee &&
-            !contact.lazada &&
-            !contact.dealshaker &&
-            !contact.website
+          !displayName &&
+          !logo &&
+          !working_hour.weekdays &&
+          !working_hour.weekend &&
+          !contact.name &&
+          !contact.phone &&
+          !contact.email &&
+          !contact.zalo &&
+          !contact.facebook &&
+          !contact.youtube &&
+          !contact.fanpage &&
+          !contact.tiki &&
+          !contact.shopee &&
+          !contact.lazada &&
+          !contact.dealshaker &&
+          !contact.website
         "
       >
         Submit
@@ -240,9 +242,9 @@
 </template>
 
 <script>
-import {db} from '../../configs/firebaseInit';
+import { db } from "../../configs/firebaseInit";
 export default {
-  name: 'edit-settings',
+  name: "edit-settings",
   data() {
     return {
       title: null,
@@ -250,7 +252,7 @@ export default {
       displayName: null,
       working_hour: {
         weekdays: null,
-        weekend: null
+        weekend: null,
       },
       contact: {
         name: null,
@@ -264,17 +266,17 @@ export default {
         shopee: null,
         lazada: null,
         dealshaker: null,
-        website: null
-      }
+        website: null,
+      },
     };
   },
   beforeRouteEnter(to, from, next) {
     db.collection("settings")
       .where("id", "==", "settings")
       .get()
-      .then(querySnapshot => {
-        querySnapshot.forEach(doc => {
-          next(vm => {
+      .then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+          next((vm) => {
             vm.title = doc.data().title;
             vm.logo = doc.data().logo;
             vm.displayName = doc.data().displayName;
@@ -323,8 +325,8 @@ export default {
       db.collection("settings")
         .where("id", "==", "settings")
         .get()
-        .then(querySnapshot => {
-          querySnapshot.forEach(doc => {
+        .then((querySnapshot) => {
+          querySnapshot.forEach((doc) => {
             doc.ref
               .update({
                 title: this.title,
@@ -332,7 +334,7 @@ export default {
                 displayName: this.displayName,
                 working_hour: {
                   weekdays: this.working_hour.weekdays,
-                  weekend: this.working_hour.weekend
+                  weekend: this.working_hour.weekend,
                 },
                 contact: {
                   name: this.contact.name,
@@ -346,15 +348,15 @@ export default {
                   shopee: this.contact.shopee,
                   lazada: this.contact.lazada,
                   dealshaker: this.contact.dealshaker,
-                  website: this.contact.website
-                }
+                  website: this.contact.website,
+                },
               })
               .then(() => {
-                this.$router.push('/settings');
+                this.$router.push("/settings");
               });
           });
         });
-    }
-  }
-}
+    },
+  },
+};
 </script>
