@@ -12,13 +12,13 @@
     <form>
       <div class="row">
         <div class="col-12"><h1>Generate Informations</h1></div>
-        <div class="col-6">
+        <div class="col-12 col-md-6">
           <div class="form-group">
             <label for="exampleFormControlInput1">Site Title:</label>
             <p>{{ title ? title : "N/A" }}</p>
           </div>
         </div>
-        <div class="col-6">
+        <div class="col-12 col-md-6">
           <div class="form-group">
             <label for="exampleFormControlInput1">Display Name:</label>
             <p>{{ displayName ? displayName : "N/A" }}</p>
@@ -26,13 +26,13 @@
         </div>
         <div class="col-12 p-0">
           <div class="row m-0">
-            <div class="col-6">
+            <div class="col-12 col-md-6">
               <div class="form-group">
                 <label for="exampleFormControlInput1">Logo:</label>
                 <p>{{ logo ? logo : "N/A" }}</p>
               </div>
             </div>
-            <div class="col-6">
+            <div class="col-12 col-md-6">
               <img :src="logo" alt="" height="100px" />
             </div>
           </div>
@@ -40,13 +40,13 @@
       </div>
       <div class="row">
         <div class="col-12"><h1>Working Hour</h1></div>
-        <div class="col-6">
+        <div class="col-12 col-md-6">
           <div class="form-group">
             <label for="exampleFormControlInput1">Weekdays:</label>
             <p>{{ working_hour.weekdays ? working_hour.weekdays : "N/A" }}</p>
           </div>
         </div>
-        <div class="col-6">
+        <div class="col-12 col-md-6">
           <div class="form-group">
             <label for="exampleFormControlInput1">Weekend:</label>
             <p>{{ working_hour.weekend ? working_hour.weekend : "N/A" }}</p>
@@ -55,73 +55,73 @@
       </div>
       <div class="row">
         <div class="col-12"><h1>Contact</h1></div>
-        <div class="col-6">
+        <div class="col-12 col-md-6">
           <div class="form-group">
             <label for="exampleFormControlInput1">Name:</label>
             <p>{{ contact.name ? contact.name : "N/A" }}</p>
           </div>
         </div>
-        <div class="col-6">
+        <div class="col-12 col-md-6">
           <div class="form-group">
             <label for="exampleFormControlInput1">Phone:</label>
             <p>{{ contact.phone ? contact.phone : "N/A" }}</p>
           </div>
         </div>
-        <div class="col-6">
+        <div class="col-12 col-md-6">
           <div class="form-group">
             <label for="exampleFormControlInput1">Email:</label>
             <p>{{ contact.email ? contact.email : "N/A" }}</p>
           </div>
         </div>
-        <div class="col-6">
+        <div class="col-12 col-md-6">
           <div class="form-group">
             <label for="exampleFormControlInput1">Zalo:</label>
             <p>{{ contact.zalo ? contact.zalo : "N/A" }}</p>
           </div>
         </div>
-        <div class="col-6">
+        <div class="col-12 col-md-6">
           <div class="form-group">
             <label for="exampleFormControlInput1">Facebook:</label>
             <p>{{ contact.facebook ? contact.facebook : "N/A" }}</p>
           </div>
         </div>
-        <div class="col-6">
+        <div class="col-12 col-md-6">
           <div class="form-group">
             <label for="exampleFormControlInput1">Youtube:</label>
             <p>{{ contact.youtube ? contact.youtube : "N/A" }}</p>
           </div>
         </div>
-        <div class="col-6">
+        <div class="col-12 col-md-6">
           <div class="form-group">
             <label for="exampleFormControlInput1">Fanpage:</label>
             <p>{{ contact.fanpage ? contact.fanpage : "N/A" }}</p>
           </div>
         </div>
-        <div class="col-6">
+        <div class="col-12 col-md-6">
           <div class="form-group">
             <label for="exampleFormControlInput1">Tiki:</label>
             <p>{{ contact.tiki ? contact.tiki : "N/A" }}</p>
           </div>
         </div>
-        <div class="col-6">
+        <div class="col-12 col-md-6">
           <div class="form-group">
             <label for="exampleFormControlInput1">Shopee:</label>
             <p>{{ contact.shopee ? contact.shopee : "N/A" }}</p>
           </div>
         </div>
-        <div class="col-6">
+        <div class="col-12 col-md-6">
           <div class="form-group">
             <label for="exampleFormControlInput1">Lazada:</label>
             <p>{{ contact.lazada ? contact.lazada : "N/A" }}</p>
           </div>
         </div>
-        <div class="col-6">
+        <div class="col-12 col-md-6">
           <div class="form-group">
             <label for="exampleFormControlInput1">Dealshaker:</label>
             <p>{{ contact.dealshaker ? contact.dealshaker : "N/A" }}</p>
           </div>
         </div>
-        <div class="col-6">
+        <div class="col-12 col-md-6">
           <div class="form-group">
             <label for="exampleFormControlInput1">Website:</label>
             <p>{{ contact.website ? contact.website : "N/A" }}</p>

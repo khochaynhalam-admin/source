@@ -8,7 +8,7 @@
     <form @submit="saveSettings">
       <div class="row">
         <div class="col-12"><h1>Generate Informations</h1></div>
-        <div class="col-6">
+        <div class="col-12 col-md-6">
           <div class="form-group">
             <label for="exampleFormControlInput1">Site Title:</label>
             <input
@@ -19,7 +19,7 @@
             />
           </div>
         </div>
-        <div class="col-6">
+        <div class="col-12 col-md-6">
           <div class="form-group">
             <label for="exampleFormControlInput1">Display Name:</label>
             <input
@@ -32,7 +32,7 @@
         </div>
         <div class="col-12 p-0">
           <div class="row m-0">
-            <div class="col-6">
+            <div class="col-12 col-md-6">
               <div class="form-group">
                 <label for="exampleFormControlInput1">Logo:</label>
                 <input
@@ -43,7 +43,7 @@
                 />
               </div>
             </div>
-            <div class="col-6">
+            <div class="col-12 col-md-6">
               <img :src="logo" alt="" height="100px" />
             </div>
           </div>
@@ -51,7 +51,7 @@
       </div>
       <div class="row">
         <div class="col-12"><h1>Working Hour</h1></div>
-        <div class="col-6">
+        <div class="col-12 col-md-6">
           <div class="form-group">
             <label for="exampleFormControlInput1">Weekdays:</label>
             <input
@@ -62,7 +62,7 @@
             />
           </div>
         </div>
-        <div class="col-6">
+        <div class="col-12 col-md-6">
           <div class="form-group">
             <label for="exampleFormControlInput1">Weekend:</label>
             <input
@@ -76,7 +76,7 @@
       </div>
       <div class="row">
         <div class="col-12"><h1>Contact</h1></div>
-        <div class="col-6">
+        <div class="col-12 col-md-6">
           <div class="form-group">
             <label for="exampleFormControlInput1">Name:</label>
             <input
@@ -87,7 +87,7 @@
             />
           </div>
         </div>
-        <div class="col-6">
+        <div class="col-12 col-md-6">
           <div class="form-group">
             <label for="exampleFormControlInput1">Phone:</label>
             <input
@@ -98,7 +98,7 @@
             />
           </div>
         </div>
-        <div class="col-6">
+        <div class="col-12 col-md-6">
           <div class="form-group">
             <label for="exampleFormControlInput1">Email:</label>
             <input
@@ -109,7 +109,7 @@
             />
           </div>
         </div>
-        <div class="col-6">
+        <div class="col-12 col-md-6">
           <div class="form-group">
             <label for="exampleFormControlInput1">Zalo:</label>
             <input
@@ -120,7 +120,7 @@
             />
           </div>
         </div>
-        <div class="col-6">
+        <div class="col-12 col-md-6">
           <div class="form-group">
             <label for="exampleFormControlInput1">Facebook:</label>
             <input
@@ -131,7 +131,7 @@
             />
           </div>
         </div>
-        <div class="col-6">
+        <div class="col-12 col-md-6">
           <div class="form-group">
             <label for="exampleFormControlInput1">Youtube:</label>
             <input
@@ -142,7 +142,7 @@
             />
           </div>
         </div>
-        <div class="col-6">
+        <div class="col-12 col-md-6">
           <div class="form-group">
             <label for="exampleFormControlInput1">Fanpage:</label>
             <input
@@ -153,7 +153,7 @@
             />
           </div>
         </div>
-        <div class="col-6">
+        <div class="col-12 col-md-6">
           <div class="form-group">
             <label for="exampleFormControlInput1">Tiki:</label>
             <input
@@ -164,7 +164,7 @@
             />
           </div>
         </div>
-        <div class="col-6">
+        <div class="col-12 col-md-6">
           <div class="form-group">
             <label for="exampleFormControlInput1">Shopee:</label>
             <input
@@ -175,7 +175,7 @@
             />
           </div>
         </div>
-        <div class="col-6">
+        <div class="col-12 col-md-6">
           <div class="form-group">
             <label for="exampleFormControlInput1">Lazada:</label>
             <input
@@ -186,7 +186,7 @@
             />
           </div>
         </div>
-        <div class="col-6">
+        <div class="col-12 col-md-6">
           <div class="form-group">
             <label for="exampleFormControlInput1">Dealshaker:</label>
             <input
@@ -197,7 +197,7 @@
             />
           </div>
         </div>
-        <div class="col-6">
+        <div class="col-12 col-md-6">
           <div class="form-group">
             <label for="exampleFormControlInput1">Website:</label>
             <input
