@@ -1,7 +1,7 @@
 <template>
   <CFooter :fixed="false">
     <div>
-      <a href="" target="_blank">khochaynhalam</a>
+      <a href="https://khochaynhalam.com/" target="_blank">khochaynhalam</a>
       <span class="ml-1">&copy; {{new Date().getFullYear()}} Mizu Creator.</span>
     </div>
     <div class="ml-auto">

@@ -8,6 +8,26 @@ export default [
         to: '/dashboard',
         icon: 'cil-speedometer',
         badge: {
+          color: 'secondary',
+          text: 'Comming soon'
+        }
+      },
+      {
+        _name: 'CSidebarNavItem',
+        name: 'Settings',
+        to: '/settings',
+        icon: 'cil-settings',
+        badge: {
+          color: 'primary',
+          text: 'NEW'
+        }
+      },
+      {
+        _name: 'CSidebarNavItem',
+        name: 'Products',
+        to: '/products',
+        icon: 'cil-settings',
+        badge: {
           color: 'primary',
           text: 'NEW'
         }

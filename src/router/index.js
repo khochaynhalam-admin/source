@@ -7,11 +7,11 @@ const TheContainer = () => import('@/containers/TheContainer')
 // Views
 const Dashboard = () => import('@/views/Dashboard')
 
-// Users
-const Users = () => import('@/views/users/Users')
-const User = () => import('@/views/users/User')
 const Settings = () => import('@/views/settings/Settings')
 const ViewSettings = () => import('@/views/settings/ViewSettings')
+const Products = () => import('@/views/products/Products')
+const ProductModify = () => import('@/views/products/ProductModify')
+const ProductDetails = () => import('@/views/products/ProductDetails')
 
 Vue.use(Router)
 
@@ -36,32 +36,6 @@ function configRoutes () {
           component: Dashboard
         },
         {
-          path: 'users',
-          meta: {
-            label: 'Users'
-          },
-          component: {
-            render(c) {
-              return c('router-view')
-            }
-          },
-          children: [
-            {
-              path: '',
-              name: 'Users',
-              component: Users
-            },
-            {
-              path: ':id',
-              meta: {
-                label: 'User Details'
-              },
-              name: 'User',
-              component: User
-            }
-          ]
-        },
-        {
           path: 'settings',
           meta: {
             label: 'Settings'
@@ -81,6 +55,39 @@ function configRoutes () {
               path: 'edit',
               name: 'edit-settings',
               component: Settings
+            },
+          ],
+        },
+        {
+          path: 'products',
+          meta: {
+            label: 'Products'
+          },
+          component: {
+            render(c) {
+              return c('router-view')
+            }
+          },
+          children: [
+            {
+              path: '',
+              name: 'products',
+              component: Products
+            },
+            {
+              path: ':id',
+              name: 'product-details',
+              component: ProductDetails
+            },
+            {
+              path: 'create',
+              name: 'product-modify',
+              component: ProductModify
+            },
+            {
+              path: ':id/edit',
+              name: 'product-modify',
+              component: ProductModify
             },
           ],
         },

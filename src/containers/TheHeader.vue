@@ -13,23 +13,23 @@
     <CHeaderBrand class="mx-auto d-lg-none" to="/">
       <CIcon name="logo" height="48" alt="Logo"/>
     </CHeaderBrand>
-    <CHeaderNav class="d-md-down-none mr-auto">
+    <!-- <CHeaderNav class="d-md-down-none mr-auto">
       <CHeaderNavItem class="px-3">
         <CHeaderNavLink to="/dashboard">
           Dashboard
         </CHeaderNavLink>
       </CHeaderNavItem>
-      <!-- <CHeaderNavItem class="px-3">
+      <CHeaderNavItem class="px-3">
         <CHeaderNavLink to="/users" exact>
           Users
         </CHeaderNavLink>
-      </CHeaderNavItem> -->
+      </CHeaderNavItem>
       <CHeaderNavItem class="px-3">
         <CHeaderNavLink to="/settings">
           Settings
         </CHeaderNavLink>
       </CHeaderNavItem>
-    </CHeaderNav>
+    </CHeaderNav> -->
     <!-- <CHeaderNav class="mr-4">
       <CHeaderNavItem class="d-md-down-none mx-2">
         <CHeaderNavLink>
@@ -48,9 +48,9 @@
       </CHeaderNavItem>
       <TheHeaderDropdownAccnt/>
     </CHeaderNav> -->
-    <CSubheader class="px-3">
+    <!-- <CSubheader class="px-3">
       <CBreadcrumbRouter class="border-0 mb-0"/>
-    </CSubheader>
+    </CSubheader> -->
   </CHeader>
 </template>
 
