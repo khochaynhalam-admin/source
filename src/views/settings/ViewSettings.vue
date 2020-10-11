@@ -1,11 +1,12 @@
 <template>
   <div id="view-settings">
     <div class="d-flex w-100 justify-content-between">
-    <h3>Edit Settings</h3>
-    <router-link v-bind:to="{name: 'edit-settings'}" class="btn btn-primary"
+      <h3>Edit Settings</h3>
+      <router-link v-bind:to="{ name: 'edit-settings' }" class="btn btn-primary"
         >Edit</router-link
-      ></div>
-    <p style="color: red;">
+      >
+    </div>
+    <p style="color: red">
       NOTE:
       <span>If all fields are empty, reload the page to get data</span>
     </p>
@@ -128,6 +129,15 @@
           </div>
         </div>
       </div>
+      <div class="row">
+        <div class="col-12"><h1>Header</h1></div>
+        <div class="col-12 col-md-6">
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Hottest Products:</label>
+            <p>{{ numberHottestProducts ? numberHottestProducts : "N/A" }}</p>
+          </div>
+        </div>
+      </div>
     </form>
   </div>
 </template>
@@ -143,7 +153,7 @@ export default {
       displayName: null,
       working_hour: {
         weekdays: null,
-        weekend: null
+        weekend: null,
       },
       contact: {
         name: null,
@@ -157,17 +167,18 @@ export default {
         shopee: null,
         lazada: null,
         dealshaker: null,
-        website: null
-      }
+        website: null,
+      },
+      numberHottestProducts: null,
     };
   },
   beforeRouteEnter(to, from, next) {
     db.collection("settings")
       .where("id", "==", "settings")
       .get()
-      .then(querySnapshot => {
-        querySnapshot.forEach(doc => {
-          next(vm => {
+      .then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+          next((vm) => {
             vm.title = doc.data().title;
             vm.logo = doc.data().logo;
             vm.displayName = doc.data().displayName;
@@ -207,10 +218,11 @@ export default {
             vm.contact.website = doc.data().contact
               ? doc.data().contact.website
               : "";
+            vm.numberHottestProducts = doc.data().numberHottestProducts;
           });
         });
       });
-  }
+  },
 };
 </script>
 

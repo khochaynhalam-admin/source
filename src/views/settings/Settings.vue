@@ -209,6 +209,52 @@
           </div>
         </div>
       </div>
+      <div class="row">
+        <div class="col-12">
+          <h1>Header</h1>
+          <span>This is the settings for the header</span>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Hottest products(1-5):</label>
+            <input
+              type="number"
+              class="form-control"
+              min="1"
+              max="5"
+              placeholder="The number of hostest products"
+              v-model="numberHottestProducts"
+            />
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="form-group">
+            <div class="card">
+              <div class="card-header">Hottest products list</div>
+              <div class="card-body">
+                <table class="w-100 table table-responsive-sm table-striped">
+                  <thead>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Price</th>
+                    <th>Orders</th>
+                  </thead>
+                  <tbody>
+                    <tr v-for="item of slideList" v-bind:key="item.key">
+                      <td>{{ item.id }}</td>
+                      <td>{{ item.name }}</td>
+                      <td>{{ item.type }}</td>
+                      <td>{{ item.price }}</td>
+                      <td>{{ item.orders }}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <router-link v-bind:to="{ name: 'view-settings' }" class="btn"
         >Cancel</router-link
       >
@@ -232,7 +278,8 @@
           !contact.shopee &&
           !contact.lazada &&
           !contact.dealshaker &&
-          !contact.website
+          !contact.website &&
+          !numberHottestProducts
         "
       >
         Submit
@@ -268,6 +315,8 @@ export default {
         dealshaker: null,
         website: null,
       },
+      numberHottestProducts: 1,
+      slideList: [],
     };
   },
   beforeRouteEnter(to, from, next) {
@@ -277,9 +326,11 @@ export default {
       .then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
           next((vm) => {
-            vm.title = doc.data().title;
-            vm.logo = doc.data().logo;
-            vm.displayName = doc.data().displayName;
+            vm.title = doc.data().title ? doc.data().title : "";
+            vm.logo = doc.data().logo ? doc.data().logo : "";
+            vm.displayName = doc.data().displayName
+              ? doc.data().displayName
+              : "";
             vm.working_hour.weekdays = doc.data().working_hour
               ? doc.data().working_hour.weekdays
               : "";
@@ -316,6 +367,9 @@ export default {
             vm.contact.website = doc.data().contact
               ? doc.data().contact.website
               : "";
+            vm.numberHottestProducts = doc.data().numberHottestProducts
+              ? doc.data().numberHottestProducts
+              : 1;
           });
         });
       });
@@ -350,6 +404,7 @@ export default {
                   dealshaker: this.contact.dealshaker,
                   website: this.contact.website,
                 },
+                numberHottestProducts: this.numberHottestProducts,
               })
               .then(() => {
                 this.$router.push("/settings");
@@ -360,3 +415,9 @@ export default {
   },
 };
 </script>
+
+<style lang="scss">
+label {
+  font-weight: 700;
+}
+</style>
