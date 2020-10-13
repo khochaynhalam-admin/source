@@ -10,7 +10,7 @@
         <div class="col-12"><h1>Generate Informations</h1></div>
         <div class="col-12 col-md-6">
           <div class="form-group">
-            <label for="exampleFormControlInput1">Site Title:</label>
+            <label>Site Title:</label>
             <input
               type="text"
               class="form-control"
@@ -21,7 +21,7 @@
         </div>
         <div class="col-12 col-md-6">
           <div class="form-group">
-            <label for="exampleFormControlInput1">Display Name:</label>
+            <label>Display Name:</label>
             <input
               type="text"
               class="form-control"
@@ -34,7 +34,7 @@
           <div class="row m-0">
             <div class="col-12 col-md-6">
               <div class="form-group">
-                <label for="exampleFormControlInput1">Logo:</label>
+                <label>Logo:</label>
                 <input
                   type="text"
                   class="form-control"
@@ -53,7 +53,7 @@
         <div class="col-12"><h1>Working Hour</h1></div>
         <div class="col-12 col-md-6">
           <div class="form-group">
-            <label for="exampleFormControlInput1">Weekdays:</label>
+            <label>Weekdays:</label>
             <input
               type="text"
               class="form-control"
@@ -64,7 +64,7 @@
         </div>
         <div class="col-12 col-md-6">
           <div class="form-group">
-            <label for="exampleFormControlInput1">Weekend:</label>
+            <label>Weekend:</label>
             <input
               type="text"
               class="form-control"
@@ -78,7 +78,7 @@
         <div class="col-12"><h1>Contact</h1></div>
         <div class="col-12 col-md-6">
           <div class="form-group">
-            <label for="exampleFormControlInput1">Name:</label>
+            <label>Name:</label>
             <input
               type="text"
               class="form-control"
@@ -89,7 +89,7 @@
         </div>
         <div class="col-12 col-md-6">
           <div class="form-group">
-            <label for="exampleFormControlInput1">Phone:</label>
+            <label>Phone:</label>
             <input
               type="text"
               class="form-control"
@@ -100,7 +100,7 @@
         </div>
         <div class="col-12 col-md-6">
           <div class="form-group">
-            <label for="exampleFormControlInput1">Email:</label>
+            <label>Email:</label>
             <input
               type="text"
               class="form-control"
@@ -111,7 +111,7 @@
         </div>
         <div class="col-12 col-md-6">
           <div class="form-group">
-            <label for="exampleFormControlInput1">Zalo:</label>
+            <label>Zalo:</label>
             <input
               type="text"
               class="form-control"
@@ -122,7 +122,7 @@
         </div>
         <div class="col-12 col-md-6">
           <div class="form-group">
-            <label for="exampleFormControlInput1">Facebook:</label>
+            <label>Facebook:</label>
             <input
               type="text"
               class="form-control"
@@ -133,7 +133,7 @@
         </div>
         <div class="col-12 col-md-6">
           <div class="form-group">
-            <label for="exampleFormControlInput1">Youtube:</label>
+            <label>Youtube:</label>
             <input
               type="text"
               class="form-control"
@@ -144,7 +144,7 @@
         </div>
         <div class="col-12 col-md-6">
           <div class="form-group">
-            <label for="exampleFormControlInput1">Fanpage:</label>
+            <label>Fanpage:</label>
             <input
               type="text"
               class="form-control"
@@ -155,7 +155,7 @@
         </div>
         <div class="col-12 col-md-6">
           <div class="form-group">
-            <label for="exampleFormControlInput1">Tiki:</label>
+            <label>Tiki:</label>
             <input
               type="text"
               class="form-control"
@@ -166,7 +166,7 @@
         </div>
         <div class="col-12 col-md-6">
           <div class="form-group">
-            <label for="exampleFormControlInput1">Shopee:</label>
+            <label>Shopee:</label>
             <input
               type="text"
               class="form-control"
@@ -177,7 +177,7 @@
         </div>
         <div class="col-12 col-md-6">
           <div class="form-group">
-            <label for="exampleFormControlInput1">Lazada:</label>
+            <label>Lazada:</label>
             <input
               type="text"
               class="form-control"
@@ -188,7 +188,7 @@
         </div>
         <div class="col-12 col-md-6">
           <div class="form-group">
-            <label for="exampleFormControlInput1">Dealshaker:</label>
+            <label>Dealshaker:</label>
             <input
               type="text"
               class="form-control"
@@ -199,7 +199,7 @@
         </div>
         <div class="col-12 col-md-6">
           <div class="form-group">
-            <label for="exampleFormControlInput1">Website:</label>
+            <label>Website:</label>
             <input
               type="text"
               class="form-control"
@@ -209,14 +209,14 @@
           </div>
         </div>
       </div>
-      <div class="row">
+      <!-- <div class="row">
         <div class="col-12">
           <h1>Header</h1>
           <span>This is the settings for the header</span>
         </div>
         <div class="col-12 col-md-6">
           <div class="form-group">
-            <label for="exampleFormControlInput1">Hottest products(1-5):</label>
+            <label>Hottest products(1-5):</label>
             <input
               type="number"
               class="form-control"
@@ -254,36 +254,89 @@
             </div>
           </div>
         </div>
+      </div> -->
+      <div class="row">
+        <div class="col-12">
+          <h1>About</h1>
+        </div>
+        <div
+          class="row w-100 m-0 about-item"
+          v-for="(item, index) in about"
+          v-bind:key="item.id"
+        >
+          <div class="col-12 col-md-6">
+            <div class="form-group">
+              <label>About keyword {{ index + 1 }}:</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter the about keyword"
+                v-model="item.keyword"
+              />
+              <button
+                class="btn btn--delete-item p-0 font-weight-bold d-flex align-items-center mt-2"
+                type="button"
+                @click="deleteAboutItem(index)"
+              >
+                <img src="../../assets/icons/ic_delete.svg" alt="" />
+                Delete this item
+              </button>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="form-group">
+              <label> About description {{ index + 1 }}: </label>
+              <textarea
+                type="text"
+                class="form-control"
+                placeholder="Enter the about description"
+                v-model="item.description"
+              ></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <button
+            type="button"
+            class="btn font-weight-bold d-flex align-items-center p-0"
+            @click="addMoreAbout"
+          >
+            <img src="../../assets/icons/ic_plus.svg" alt="" /> Add more
+          </button>
+        </div>
       </div>
-      <router-link v-bind:to="{ name: 'view-settings' }" class="btn"
-        >Cancel</router-link
-      >
-      <button
-        type="submit"
-        class="btn btn-success"
-        :disabled="
-          !title &&
-          !displayName &&
-          !logo &&
-          !working_hour.weekdays &&
-          !working_hour.weekend &&
-          !contact.name &&
-          !contact.phone &&
-          !contact.email &&
-          !contact.zalo &&
-          !contact.facebook &&
-          !contact.youtube &&
-          !contact.fanpage &&
-          !contact.tiki &&
-          !contact.shopee &&
-          !contact.lazada &&
-          !contact.dealshaker &&
-          !contact.website &&
-          !numberHottestProducts
-        "
-      >
-        Submit
-      </button>
+      <div class="d-flex my-5 mx-0">
+        <router-link v-bind:to="{ name: 'view-settings' }" class="btn"
+          >Cancel</router-link
+        >
+        <button
+          type="submit"
+          class="btn btn-success"
+          :disabled="
+            !title &&
+            !displayName &&
+            !logo &&
+            !working_hour.weekdays &&
+            !working_hour.weekend &&
+            !contact.name &&
+            !contact.phone &&
+            !contact.email &&
+            !contact.zalo &&
+            !contact.facebook &&
+            !contact.youtube &&
+            !contact.fanpage &&
+            !contact.tiki &&
+            !contact.shopee &&
+            !contact.lazada &&
+            !contact.dealshaker &&
+            !contact.website &&
+            !about.keyword &&
+            !about.description
+          "
+        >
+          Submit
+        </button>
+      </div>
     </form>
   </div>
 </template>
@@ -317,6 +370,13 @@ export default {
       },
       numberHottestProducts: 1,
       slideList: [],
+      about: [
+        {
+          id: 0,
+          keyword: "",
+          description: "",
+        },
+      ],
     };
   },
   beforeRouteEnter(to, from, next) {
@@ -370,6 +430,7 @@ export default {
             vm.numberHottestProducts = doc.data().numberHottestProducts
               ? doc.data().numberHottestProducts
               : 1;
+            vm.about = doc.data().about ? doc.data().about : [];
           });
         });
       });
@@ -405,12 +466,22 @@ export default {
                   website: this.contact.website,
                 },
                 numberHottestProducts: this.numberHottestProducts,
+                about: this.about,
               })
               .then(() => {
                 this.$router.push("/settings");
               });
           });
         });
+    },
+    addMoreAbout() {
+      this.about.push({
+        keyword: "",
+        description: "",
+      });
+    },
+    deleteAboutItem(itemIndex) {
+      this.about.splice(itemIndex, 1);
     },
   },
 };
